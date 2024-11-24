@@ -12,7 +12,7 @@ public class Zerosquaresfinal {
         
         Scanner sc=new Scanner(System.in);
         State preState = new State(Level2.grid, Level2.color, Level2.status);
-        System.out.println("Enter number 1 for DFS or 2 for BFS");
+        System.out.println("Enter number 1 for DFS or 2 for BFS or 3 for DFSR");
         int x=sc.nextInt();
         switch(x){
             case 1:
@@ -23,7 +23,9 @@ public class Zerosquaresfinal {
                 BFS bfs=new BFS();
                 bfs.search(preState);
                 break;
-        
+            case 3:
+                DFSRecursion dfsr=new DFSRecursion();
+                dfsr.search(preState);
         }
 
        //System.out.println("Initial State:");
