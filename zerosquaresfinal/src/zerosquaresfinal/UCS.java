@@ -14,11 +14,11 @@ public class UCS {
 
     
     public boolean search(State initialState) {
-        // استخدام PriorityQueue مع Comparator للمقارنة بناءً على التكلفة
+        
         PriorityQueue<State> priorityQueue = new PriorityQueue<>(new Comparator<State>() {
     @Override
     public int compare(State state1, State state2) {
-        // مقارنة تكلفة الحالتين
+        
         return Integer.compare(state1.cost, state2.cost);
     }
 });

@@ -9,6 +9,7 @@ public class State {
     public String[][] color;
     public String[][] status;
     public State parent;
+    public int cost;
 
     public State(String[][] grid, String[][] color, String[][] status) {
         this.grid = grid;
