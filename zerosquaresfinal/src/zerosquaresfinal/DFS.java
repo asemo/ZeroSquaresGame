@@ -16,7 +16,11 @@ public class DFS {
         this.visited = new HashSet<>();
     }
 
+<<<<<<< HEAD
    
+=======
+    
+>>>>>>> 704100df542ca89d8653d4ee5936dc6691154821
     public boolean search(State initialState) {
         Stack<State> stack = new Stack<>();
         initialState.parent = null;
@@ -29,7 +33,11 @@ public class DFS {
         while (!stack.isEmpty()) {
             State currentState = stack.pop();
 
+<<<<<<< HEAD
             
+=======
+           
+>>>>>>> 704100df542ca89d8653d4ee5936dc6691154821
             System.out.println("Current grid:");
             System.out.println(currentState.show());
 
@@ -38,11 +46,19 @@ public class DFS {
                 ArrayList<State> path = reconstructPath(currentState);  
                 System.out.println("Number of visited states: " + visited.size());
                 System.out.println("Number of states in the path: " + path.size());
+<<<<<<< HEAD
                 markPathOnGrid(path); 
                 return true;
             }
 
             
+=======
+                markPathOnGrid(path);  
+                return true;
+            }
+
+           
+>>>>>>> 704100df542ca89d8653d4ee5936dc6691154821
             addNextStates(stack, currentState, directions);
         }
 
@@ -52,7 +68,11 @@ public class DFS {
 
 private void addNextStates(Stack<State> stack, State currentState, List<String> directions) {
     for (String direction : directions) {
+<<<<<<< HEAD
         
+=======
+       
+>>>>>>> 704100df542ca89d8653d4ee5936dc6691154821
         State nextState = null;
 
         
@@ -77,7 +97,11 @@ private void addNextStates(Stack<State> stack, State currentState, List<String> 
             stack.push(nextState);  
             visited.add(nextState.show());  
 
+<<<<<<< HEAD
            
+=======
+            
+>>>>>>> 704100df542ca89d8653d4ee5936dc6691154821
             System.out.println("Direction: " + direction);
             System.out.println("Grid after movement:");
             System.out.println(nextState.show());
@@ -99,17 +123,26 @@ private void addNextStates(Stack<State> stack, State currentState, List<String> 
         return path;
     }
 
+<<<<<<< HEAD
    
+=======
+    
+>>>>>>> 704100df542ca89d8653d4ee5936dc6691154821
     private void markPathOnGrid(ArrayList<State> path) {
         State finalState = path.get(path.size() - 1);  
         for (State state : path) {
             for (int i = 0; i < state.grid.length; i++) {
                 for (int j = 0; j < state.grid[i].length; j++) {
+<<<<<<< HEAD
                     if(state.grid[i][j].equals("red")){
                     finalState.grid[i][j]="◆";
                     }
                     else if ("free".equals(state.status[i][j])) {  
                         finalState.grid[i][j] = "◆"; 
+=======
+                    if ("free".equals(state.status[i][j])) {  
+                        finalState.grid[i][j] = "◆";  
+>>>>>>> 704100df542ca89d8653d4ee5936dc6691154821
                     }
                 }
             }
